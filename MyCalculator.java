@@ -20,6 +20,16 @@ public class MyCalculator {
     double result = operand1 + operand2;
     return result;
   }
+
+  public double sub(Scanner scan) {
+    System.out.print("First number: ");
+    double operand1 = scan.nextDouble();
+    System.out.print("Second number: ");
+    double operand2 = scan.nextDouble();
+
+    double result = operand1 - operand2;
+    return result;
+  }
   
   public static void main (String[] args) {
 
@@ -34,7 +44,7 @@ public class MyCalculator {
   switch(operation) {
     case 1 : result = calc.add(scan);
       break;
-    case 2 : System.out.println("You chose sub");
+    case 2 : result = calc.sub(scan);
       break;
     case 3 : System.out.println("You chose mult");
       break;
