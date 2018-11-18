@@ -40,6 +40,25 @@ public class MyCalculator {
     double result = operand1 * operand2;
     return result;
   }
+
+  public double div(Scanner scan) {
+    System.out.print("First number: ");
+    double operand1 = scan.nextDouble();
+    System.out.print("Second number: ");
+    double operand2 = scan.nextDouble();
+
+    boolean check = false;
+    while (!check) {
+	if (operand2 == 0) {
+	    System.out.print("You can't divide by zero! Try again: ");
+	    operand2 = scan.nextDouble();
+	} else {
+	    check = true;
+	}
+    }
+    double result = operand1 / operand2;
+    return result;
+  }
   
   public static void main (String[] args) {
 
@@ -58,7 +77,7 @@ public class MyCalculator {
       break;
     case 3 : result = calc.mult(scan);
       break;
-    case 4 : System.out.println("You chose div");
+    case 4 : result = calc.div(scan);
       break;
     default: System.out.println("Not a valid operation!");
       break;
