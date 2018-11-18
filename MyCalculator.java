@@ -30,6 +30,16 @@ public class MyCalculator {
     double result = operand1 - operand2;
     return result;
   }
+
+  public double mult(Scanner scan) {
+    System.out.print("First number: ");
+    double operand1 = scan.nextDouble();
+    System.out.print("Second number: ");
+    double operand2 = scan.nextDouble();
+
+    double result = operand1 * operand2;
+    return result;
+  }
   
   public static void main (String[] args) {
 
@@ -46,7 +56,7 @@ public class MyCalculator {
       break;
     case 2 : result = calc.sub(scan);
       break;
-    case 3 : System.out.println("You chose mult");
+    case 3 : result = calc.mult(scan);
       break;
     case 4 : System.out.println("You chose div");
       break;
